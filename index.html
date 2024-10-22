@@ -16,7 +16,8 @@
             <label for="gallons">Gallons of gas used:</label>
             <input type="number" id="gallons" name="gallons" min="0" step="any" required>
             <br>
-            <label id="resultLabel">Miles Per Gallon:</label>
+            <label for="result">Miles Per Gallon:</label>
+            <input type="text" id="result" name="result" readonly>
             <br>
             <button type="submit">Calculate MPG</button>
             <br>
@@ -43,12 +44,12 @@
                     <p><label>Gallons: </label>${gallons}</p>
                     <p><label>MPG: </label>${mpg.toFixed(2)}</p>`;
                 document.getElementById('results').innerHTML = html;
-                document.getElementById('resultLabel').textContent = `MPG: ${mpg.toFixed(2)}`;
+                document.getElementById('result').textContent = `Miles Per Gallon: ${mpg.toFixed(2)}`;
             });
             document.getElementById('clearButton').addEventListener('click', function() {
                 document.getElementById('mpgForm').reset();
                 document.getElementById('results').innerHTML = '';
-                document.getElementById('resultLabel').textContent = '';
+                document.getElementById('result').textContent = '';
             });
         </script>       
     </main>
