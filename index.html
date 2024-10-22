@@ -10,48 +10,25 @@
     <main>
         <h1>Calculate Miles Per Gallon</h1>
         <form id="mpgForm">
-            <label for="miles">Miles driven:</label>
-            <input type="number" id="miles" name="miles" min="0" step="any" required>
-            <br>
-            <label for="gallons">Gallons of gas used:</label>
-            <input type="number" id="gallons" name="gallons" min="0" step="any" required>
-            <br>
-            <label for="result">Miles Per Gallon:</label>
-            <input type="text" id="result" name="result" readonly>
-            <br>
-            <button type="submit">Calculate MPG</button>
-            <br>
-            <button type="button" id="clearButton">Clear Entries</button>
+            <div class="form-group">
+                <label for="miles">Miles driven:</label>
+                <input type="number" id="miles" name="miles" min="0" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="gallons">Gallons of gas used:</label>
+                <input type="number" id="gallons" name="gallons" min="0" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="result">Miles Per Gallon:</label>
+                <input type="text" id="result" name="result" readonly>
+            </div>
+            <div class="form-group">
+                <button type="submit">Calculate MPG</button>
+                <button type="button" id="clearButton">Clear Entries</button>
+            </div>
         </form>
         <div id="results"></div>
-        <script>
-            "use strict";
-            
-            document.getElementById('mpgForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-                
-                const miles = parseFloat(document.getElementById('miles').value);
-                const gallons = parseFloat(document.getElementById('gallons').value);
-                
-                if (isNaN(miles) || miles <= 0 || isNaN(gallons) || gallons <= 0) {
-                    alert("Please enter valid numbers greater than 0 for both miles and gallons.");
-                    return;
-                }
-                
-                const mpg = miles / gallons;
-                
-                const html = `<p><label>Miles: </label>${miles}</p>
-                    <p><label>Gallons: </label>${gallons}</p>
-                    <p><label>MPG: </label>${mpg.toFixed(2)}</p>`;
-                document.getElementById('results').innerHTML = html;
-                document.getElementById('result').textContent = `Miles Per Gallon: ${mpg.toFixed(2)}`;
-            });
-            document.getElementById('clearButton').addEventListener('click', function() {
-                document.getElementById('mpgForm').reset();
-                document.getElementById('results').innerHTML = '';
-                document.getElementById('result').textContent = '';
-            });
-        </script>       
+        <script src="mpg.js></script>       
     </main>
 </body>
 </html>
