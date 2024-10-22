@@ -7,7 +7,7 @@ document.getElementById('mpgForm').addEventListener('submit', function(event) {
     const gallons = parseFloat(document.getElementById('gallons').value);
     
     if (isNaN(miles) || miles <= 0 || isNaN(gallons) || gallons <= 0) {
-        alert("Please enter valid numbers greater than 0 for both miles and gallons.");
+        alert("Miles and Gallons must be numeric and greater than 0.");
         return;
     }
     
