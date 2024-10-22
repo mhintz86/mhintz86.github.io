@@ -9,14 +9,18 @@ body {
 h1 {
     color: blue;
 }
-label {
-    display: inline-block;
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.form-group label {
     width: 150px;
 }
-input {
+.form-group input {
     flex: 1;
 }
-button {
+.form-group button {
     margin-left: 10px;
 }
 #result {
