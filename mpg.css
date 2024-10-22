@@ -16,12 +16,14 @@ h1 {
 }
 .form-group label {
     width: 150px;
+    text-align: right;
+    margin-right: 10px;
 }
 .form-group input {
     flex: 1;
 }
-.form-group button {
-    margin-left: 10px;
+button {
+    margin-left: 160px;
 }
 #result {
     background-color: #f0f0f0;
