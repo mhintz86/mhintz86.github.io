@@ -23,7 +23,7 @@ h1 {
     width: 200px;
     padding: 5px;
 }
-button {
+.form-group button {
     width: 200px;
     padding: 5px;
     margin-left: 220px;
