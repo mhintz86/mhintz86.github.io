@@ -8,7 +8,7 @@
 </head>
 <body>
     <main>
-        <h1>The Miles Per Gallon Calculator</h1>
+        <h1>Calculate Miles Per Gallon</h1>
         <form id="mpgForm">
             <label for="miles">Miles driven:</label>
             <input type="number" id="miles" name="miles" min="0" step="any" required>
@@ -16,7 +16,9 @@
             <label for="gallons">Gallons of gas used:</label>
             <input type="number" id="gallons" name="gallons" min="0" step="any" required>
             <br>
+            <label id="resultLabel"></label>
             <button type="submit">Calculate MPG</button>
+            <button type="button" id="clearButton">Clear Entries</button>
         </form>
         <div id="results"></div>
         <script>
@@ -39,6 +41,12 @@
                     <p><label>Gallons: </label>${gallons}</p>
                     <p><label>MPG: </label>${mpg.toFixed(2)}</p>`;
                 document.getElementById('results').innerHTML = html;
+                document.getElementById('resultLabel').textContent = `MPG: ${mpg.toFixed(2)}`;
+            });
+            document.getElementById('clearButton').addEventListener('click', function() {
+                document.getElementById('mpgForm').reset();
+                document.getElementById('results').innerHTML = '';
+                document.getElementById('resultLabel').textContent = '';
             });
         </script>       
     </main>
