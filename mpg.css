@@ -11,5 +11,14 @@ h1 {
 }
 label {
     display: inline-block;
-    width: 5em;
+    width: 150px;
+}
+input {
+    flex: 1;
+}
+button {
+    margin-left: 10px;
+}
+#result {
+    background-color: #f0f0f0;
 }
